@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="idegas.css">
+    <link rel="stylesheet" href="tabs.css">
+    <link rel="stylesheet" href="tabs.js">
+</head>
+<body>
+<header>
+
+    <section class="container">
+
+        <section class="image">
+            <a href="https://www.mclaren.com" target="_blank"> <img src="McLaren.png"> </a>
+        </section>
+
+    </section>
+
+</header>
+<nav>
+
+    <section class="types">
+
+    <button class="tab-button" onclick="openTab(event, 'tab1')"><img src="Supercars.png"></button>
+    <button class="tab-button" onclick="openTab(event, 'tab2')"><img src="Legacy.png"></button>
+
+    </section>
+
+
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabContent, tabButton;
+
+            // Hide all tab content
+            tabContent = document.getElementsByClassName("tab");
+            for (i = 0; i < tabContent.length; i++) {
+                tabContent[i].style.display = "none";
+            }
+
+            // Remove "active" class from all tab buttons
+            tabButton = document.getElementsByClassName("tab-button");
+            for (i = 0; i < tabButton.length; i++) {
+                tabButton[i].className = tabButton[i].className.replace(" active", "");
+            }
+
+            // Show the selected tab content and set the button as active
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        // Open the first tab by default
+        document.getElementById("tab1").style.display = "block";
+        document.getElementsByClassName("tab-button")[0].className += " active";
+    </script>
+
+
+
+</nav>
+<main>
+
+    <div id="tab1" class="tab">
+
+        <div class="cont720">
+            <p class="s750txt"> 750S </p>
+            <a href="https://cars.mclaren.com/en/750s" target=”_blank”> <img class="s750" src="750S.png" alt="img1"> </a>
+        </div>
+
+        <div class="contArt">
+            <p class="arturatxt"> Artura </p>
+            <a href="https://cars.mclaren.com/en/artura" target=”_blank”> <img class="artura" src="Artura.jpg" alt="img2"> </a>>
+        </div>
+
+    </div>
+
+    <div id="tab2" class="tab">
+
+        <div class="cont720">
+            <p class="s720txt"> 720S </p>
+            <a href="https://cars.mclaren.com/en/super-series/720s" target=”_blank”> <img class="s720" src="720S.png" alt="img1"> </a>
+        </div>
+
+        <div class="contArt">
+            <p class="lt675txt"> 675LT </p>
+            <a href="https://cars.mclaren.com/en/legacy/675lt" target=”_blank”> <img class="lt675" src="675lt.jpg" alt="img2"> </a>
+        </div>
+    </div>
+
+
+
+
+
+</main>
+<footer>
+    <p class="fter"> Damstra Droppshiping </p>
+    <p class="fter2"> A non-profit organization supporting McLaren Automotive </p>
+</footer>
+</body>
+</html>
